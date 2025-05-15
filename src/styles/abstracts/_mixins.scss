@@ -46,11 +46,50 @@
   line-height: $line-height-6;
 }
 
-// Responsive heading for card hour value
+// ---------------------------------------------
+// SEMANTIC TYPOGRAPHY MIXINS
+// These apply presets to specific UI roles for reusability.
+// ---------------------------------------------
+
+// Report For
+@mixin profile-title-text {
+  @include text-preset-6;
+  color: $color-text-muted;
+}
+
+// Jeremy Robson
+@mixin profile-name-text {
+  @include text-preset-4;
+  color: $color-text-heading;
+
+  @media (min-width: $breakpoint-lg) {
+    @include text-preset-2;
+  }
+}
+
+// Daily, Weekly, Monthly
+@mixin profile-activity-stats {
+  @include text-preset-5-regular;
+  color: $purple-500;
+}
+
+// Work, Play, Study, etc...
+@mixin card-title-text {
+  @include text-preset-5-medium;
+  color: $color-text-heading;
+}
+
+// 32hrs, 10hrs, 4hrs, etc...
 @mixin card-hour-text {
   @include text-preset-3;
 
   @media (min-width: $breakpoint-md) {
     @include text-preset-1;
   }
+}
+
+// last Week - 36 hrs, Last Week - 8hrs, etc...
+@mixin card-subtitle-text {
+  @include text-preset-6;
+  color: $color-text-muted;
 }

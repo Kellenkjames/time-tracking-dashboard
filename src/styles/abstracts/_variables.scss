@@ -2,16 +2,21 @@
 // VARIABLES
 // ---------------------------------------------
 
+// FONT SYSTEM
 $font-primary: 'Rubik', sans-serif;
 $font-weight-regular: 400;
 $font-weight-bold: 700;
 
 // FONT SIZES
-$font-size-body: 1.6rem; // 16px base
+$font-size-body: 1.6rem;
+$font-size-title: clamp(1.8rem, 2vw, 2.4rem);
+$font-size-card-label: 1.4rem;
 
-// COLOR TOKENS
-$white: #fff;
-$black: #000;
+// ---------------------------------------------
+// COLOR TOKENS — Extracted from Figma palette
+// ---------------------------------------------
+$white: #ffffff;
+$black: #000000;
 
 $navy-950: #0e1323;
 $navy-900: #1c204b;
@@ -30,9 +35,25 @@ $green-400: #4bcf82;
 $yellow-300: #f1c75b;
 $grey-200: #d8d8d8;
 
-// TODO: COLOR ALIASES
+// ---------------------------------------------
+// COLOR ALIASES — Semantic role-based naming
+// ---------------------------------------------
+$color-bg-primary: $navy-900;
+$color-bg-card: $navy-950;
+$color-text-heading: $white;
+$color-text-body: $grey-200;
+$color-text-muted: $navy-200;
 
-// SPACING SCALE
+$color-accent-orange: $orange-300;
+$color-accent-purple: $purple-600;
+$color-accent-blue: $blue-300;
+$color-accent-pink: $pink-400;
+$color-accent-green: $green-400;
+$color-accent-yellow: $yellow-300;
+
+// ---------------------------------------------
+// SPACING SCALE (8pt grid)
+// ---------------------------------------------
 $space-0: 0;
 $space-100: 0.8rem; // 8px
 $space-200: 1.6rem; // 16px
@@ -40,7 +61,9 @@ $space-300: 2.4rem; // 24px
 $space-400: 3.2rem; // 32px
 $space-500: 4rem; // 40px
 
+// ---------------------------------------------
 // BREAKPOINTS
+// ---------------------------------------------
 $breakpoint-sm: 500px;
 $breakpoint-md: 800px;
 $breakpoint-lg: 1024px;

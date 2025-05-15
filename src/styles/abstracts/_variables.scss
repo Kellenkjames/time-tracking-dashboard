@@ -4,13 +4,36 @@
 
 // FONT SYSTEM
 $font-primary: 'Rubik', sans-serif;
+$font-weight-light: 300;
 $font-weight-regular: 400;
+$font-weight-medium: 500;
 $font-weight-bold: 700;
 
 // FONT SIZES
 $font-size-body: 1.6rem;
 $font-size-title: clamp(1.8rem, 2vw, 2.4rem);
 $font-size-card-label: 1.4rem;
+
+// ---------------------------------------------
+// TYPOGRAPHY SCALE — Font Sizes + Line Heights
+// ---------------------------------------------
+$font-size-1: 5.6rem; // 56px
+$line-height-1: 6.6rem;
+
+$font-size-2: 4rem;
+$line-height-2: 4.7rem;
+
+$font-size-3: 3.2rem;
+$line-height-3: 3.8rem;
+
+$font-size-4: 2.4rem;
+$line-height-4: 2.8rem;
+
+$font-size-5: 1.8rem;
+$line-height-5: 2.1rem;
+
+$font-size-6: 1.5rem;
+$line-height-6: 1.8rem;
 
 // ---------------------------------------------
 // COLOR TOKENS — Extracted from Figma palette

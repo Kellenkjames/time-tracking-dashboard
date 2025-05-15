@@ -1,0 +1,56 @@
+@use '../abstracts/variables' as *;
+
+// ---------------------------------------------
+// TYPOGRAPHY MIXINS (Preset-based)
+// ---------------------------------------------
+
+@mixin text-preset-1 {
+  font-weight: $font-weight-light;
+  font-size: $font-size-1;
+  line-height: $line-height-1;
+}
+
+@mixin text-preset-2 {
+  font-weight: $font-weight-light;
+  font-size: $font-size-2;
+  line-height: $line-height-2;
+}
+
+@mixin text-preset-3 {
+  font-weight: $font-weight-light;
+  font-size: $font-size-3;
+  line-height: $line-height-3;
+}
+
+@mixin text-preset-4 {
+  font-weight: $font-weight-light;
+  font-size: $font-size-4;
+  line-height: $line-height-4;
+}
+
+@mixin text-preset-5-medium {
+  font-weight: $font-weight-medium;
+  font-size: $font-size-5;
+  line-height: $line-height-5;
+}
+
+@mixin text-preset-5-regular {
+  font-weight: $font-weight-regular;
+  font-size: $font-size-5;
+  line-height: $line-height-5;
+}
+
+@mixin text-preset-6 {
+  font-weight: $font-weight-regular;
+  font-size: $font-size-6;
+  line-height: $line-height-6;
+}
+
+// Responsive heading for card hour value
+@mixin card-hour-text {
+  @include text-preset-3;
+
+  @media (min-width: $breakpoint-md) {
+    @include text-preset-1;
+  }
+}

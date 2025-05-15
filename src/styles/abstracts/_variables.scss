@@ -15,6 +15,13 @@ $font-size-title: clamp(1.8rem, 2vw, 2.4rem);
 $font-size-card-label: 1.4rem;
 
 // ---------------------------------------------
+// FLUID TYPOGRAPHY SCALE — clamp() values
+// ---------------------------------------------
+$font-size-4-fluid: clamp(2rem, 2vw + 1rem, 2.4rem);
+$font-size-5-fluid: clamp(1.6rem, 1.5vw + 1rem, 1.8rem);
+$font-size-6-fluid: clamp(1.4rem, 1vw + 1rem, 1.5rem);
+
+// ---------------------------------------------
 // TYPOGRAPHY SCALE — Font Sizes + Line Heights
 // ---------------------------------------------
 $font-size-1: 5.6rem; // 56px

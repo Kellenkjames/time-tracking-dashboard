@@ -24,25 +24,25 @@
 
 @mixin text-preset-4 {
   font-weight: $font-weight-light;
-  font-size: $font-size-4;
+  font-size: $font-size-4-fluid;
   line-height: $line-height-4;
 }
 
 @mixin text-preset-5-medium {
   font-weight: $font-weight-medium;
-  font-size: $font-size-5;
+  font-size: $font-size-5-fluid;
   line-height: $line-height-5;
 }
 
 @mixin text-preset-5-regular {
   font-weight: $font-weight-regular;
-  font-size: $font-size-5;
+  font-size: $font-size-5-fluid;
   line-height: $line-height-5;
 }
 
 @mixin text-preset-6 {
   font-weight: $font-weight-regular;
-  font-size: $font-size-6;
+  font-size: $font-size-6-fluid;
   line-height: $line-height-6;
 }
 

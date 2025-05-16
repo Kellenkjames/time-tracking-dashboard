@@ -172,6 +172,15 @@ a:hover {
   }
 }
 
+@media (min-width: 800px) and (max-width: 1023px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .profile-card {
+    grid-column: 1/-1;
+    grid-row: auto;
+  }
+}
 .profile-card {
   background-color: rgba(85, 194, 230, 0.2);
   border: 2px dashed #55c2e6;

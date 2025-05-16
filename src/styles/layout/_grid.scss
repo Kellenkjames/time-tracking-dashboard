@@ -17,6 +17,19 @@
   }
 }
 
+// Tablet layout (moved outside so it's global)
+@media (min-width: $breakpoint-md) and (max-width: ($breakpoint-lg - 1)) {
+  .dashboard-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  // TODO: Move to profile card later
+  .profile-card {
+    grid-column: 1 / -1; // span all columns
+    grid-row: auto;
+  }
+}
+
 // Debugging styles
 .profile-card {
   background-color: rgba(85, 194, 230, 0.2); // light blue

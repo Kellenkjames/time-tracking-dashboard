@@ -1,0 +1,40 @@
+@use '../abstracts/variables' as *;
+
+// ---------------------------------------------
+// BASE
+// ---------------------------------------------
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $navy-950;
+  font-family: $font-primary;
+  font-size: $font-size-body;
+  font-weight: $font-weight-regular;
+  color: $white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// ---------------------------------------------
+// ACCESSIBILITY UTILITIES
+// ---------------------------------------------
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}

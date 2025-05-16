@@ -5,3 +5,10 @@
 // ---------------------------------------------
 // PROFILE - Styles for the main profile sidebar card
 // ---------------------------------------------
+
+.profile-card {
+  @media (min-width: $breakpoint-lg) {
+    grid-row: span 2; // span 2 rows
+    grid-column: 1 / 2; // stay in first column
+  }
+}

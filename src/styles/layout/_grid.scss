@@ -10,9 +10,22 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
   grid-auto-rows: minmax(15rem, auto);
-  gap: $space-300;
+  gap: $space-400;
 
   @media (min-width: $breakpoint-lg) {
     grid-template-columns: 1fr repeat(3, 1fr); // 4-column layout
   }
+}
+
+// Debugging styles
+.profile-card {
+  background-color: rgba(85, 194, 230, 0.2); // light blue
+  border: 2px dashed $blue-300;
+  padding: $space-300;
+}
+
+.card {
+  background-color: rgba(255, 94, 125, 0.2); // light pink
+  border: 2px dashed $pink-400;
+  padding: $space-300;
 }

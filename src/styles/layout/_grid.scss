@@ -5,3 +5,14 @@
 // ---------------------------------------------
 // GRID - Grid styles
 // ---------------------------------------------
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  grid-auto-rows: minmax(15rem, auto);
+  gap: $space-300;
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: 1fr repeat(3, 1fr); // 4-column layout
+  }
+}

@@ -12,7 +12,7 @@
   margin-block: 8.1rem;
 
   // Tablet-only adjustments (500px–799px)
-  @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg - 1) {
+  @media (min-width: $breakpoint-sm) and (max-width: ($breakpoint-lg - 1)) {
     margin-block: 17.4rem;
     padding-inline: $space-500;
   }

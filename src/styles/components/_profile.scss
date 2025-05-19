@@ -27,8 +27,20 @@
     }
   }
 
+  &__subtitle {
+    @include text-preset-6;
+    color: $color-text-muted;
+  }
+
+  &__name {
+    @include text-preset-2;
+    color: $color-text-heading;
+  }
+
   &__timeframe-toggle {
     @include flex-column(center, start, nowrap);
+    border-radius: 1.5rem;
+    background: $color-bg-primary;
   }
 
   &__link {

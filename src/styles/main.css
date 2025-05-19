@@ -174,12 +174,26 @@ a:hover {
   border: 3px solid #ffffff;
   margin-bottom: 4rem;
 }
+.profile-card__subtitle {
+  font-weight: 400;
+  font-size: clamp(1.4rem, 1vw + 1rem, 1.5rem);
+  line-height: 1.8rem;
+  color: #bbc0ff;
+}
+.profile-card__name {
+  font-weight: 300;
+  font-size: 4rem;
+  line-height: 4.7rem;
+  color: #ffffff;
+}
 .profile-card__timeframe-toggle {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: flex-start;
+  border-radius: 1.5rem;
+  background: #1c204b;
 }
 .profile-card__link {
   all: unset;

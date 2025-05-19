@@ -17,7 +17,29 @@
   <body>
     <main class="layout-container">
       <div class="dashboard-grid">
-        <div class="profile-card">Profile</div>
+        <div class="profile-card">
+          <!-- Top: Profile Header -->
+          <div class="profile-card__header">
+            <img
+              src="./src/assets/images/image-jeremy.png"
+              alt="Jeremy Robson"
+              class="profile-card__avatar"
+            />
+            <div class="profile-card__text-group">
+              <p class="profile-card__subtitle">Report for</p>
+              <h1 class="profile-card__name">Jeremy Robson</h1>
+            </div>
+          </div>
+
+          <!-- Bottom: Timeframe Links -->
+          <div class="profile-card__timeframe-toggle">
+            <button class="profile-card__link">Daily</button>
+            <button class="profile-card__link profile-card__link--active">
+              Weekly
+            </button>
+            <button class="profile-card__link">Monthly</button>
+          </div>
+        </div>
         <div class="card">Card 1</div>
         <div class="card">Card 2</div>
         <div class="card">Card 3</div>

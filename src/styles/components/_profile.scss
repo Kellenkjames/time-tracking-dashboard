@@ -7,6 +7,47 @@
 // ---------------------------------------------
 
 .profile-card {
+  @include flex-column(center, start, nowrap);
+  background-color: $color-accent-purple;
+  border-radius: 1.5rem;
+  padding-top: $space-400;
+  padding-left: $space-400;
+  padding-right: 8.5rem;
+  padding-bottom: 9.2rem;
+
+  &__header {
+    @include flex-column(center, start, nowrap);
+    gap: $space-100;
+
+    img {
+      width: 7.8rem;
+      border-radius: 50%;
+      border: 3px solid $white;
+      margin-bottom: $space-500;
+    }
+  }
+
+  &__timeframe-toggle {
+    @include flex-column(center, start, nowrap);
+  }
+
+  &__link {
+    all: unset;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    transition: color 0.2s ease, background-color 0.2s ease;
+
+    &:focus-visible {
+      outline: 2px dashed $color-text-heading;
+      outline-offset: 4px;
+    }
+  }
+
   @media (min-width: $breakpoint-lg) {
     grid-row: span 2; // span 2 rows
     grid-column: 1 / 2; // stay in first column

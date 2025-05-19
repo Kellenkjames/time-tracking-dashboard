@@ -147,6 +147,55 @@ a:hover {
   text-decoration: underline;
 }
 
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #5747ea;
+  border-radius: 1.5rem;
+  padding-top: 3.2rem;
+  padding-left: 3.2rem;
+  padding-right: 8.5rem;
+  padding-bottom: 9.2rem;
+}
+.profile-card__header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+.profile-card__header img {
+  width: 7.8rem;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  margin-bottom: 4rem;
+}
+.profile-card__timeframe-toggle {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.profile-card__link {
+  all: unset;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+.profile-card__link:focus-visible {
+  outline: 2px dashed #ffffff;
+  outline-offset: 4px;
+}
 @media (min-width: 1024px) {
   .profile-card {
     grid-row: span 2;
@@ -193,12 +242,6 @@ a:hover {
     grid-row: auto;
   }
 }
-.profile-card {
-  background-color: rgba(85, 194, 230, 0.2);
-  border: 2px dashed #55c2e6;
-  padding: 2.4rem;
-}
-
 .card {
   background-color: rgba(255, 94, 125, 0.2);
   border: 2px dashed #ff5e7d;

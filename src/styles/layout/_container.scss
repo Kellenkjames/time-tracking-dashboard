@@ -7,7 +7,19 @@
 // ---------------------------------------------
 
 .layout-container {
-  max-width: 111.6rem;
-  margin-block: 25.2rem;
   margin-inline: auto;
+  padding-inline: $space-400;
+  margin-block: 8.1rem;
+
+  // Tablet-only adjustments (500px–799px)
+  @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg - 1) {
+    margin-block: 17.4rem;
+    padding-inline: $space-500;
+  }
+
+  // Desktop layout (800px and up)
+  @media (min-width: $breakpoint-lg) {
+    max-width: 111.6rem;
+    margin-block: 25.2rem;
+  }
 }

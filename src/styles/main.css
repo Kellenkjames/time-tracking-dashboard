@@ -155,15 +155,27 @@ a:hover {
 }
 
 .layout-container {
-  max-width: 111.6rem;
-  margin-block: 25.2rem;
   margin-inline: auto;
+  padding-inline: 3.2rem;
+  margin-block: 8.1rem;
+}
+@media (min-width: 500px) and (max-width: 1023px) {
+  .layout-container {
+    margin-block: 17.4rem;
+    padding-inline: 4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .layout-container {
+    max-width: 111.6rem;
+    margin-block: 25.2rem;
+  }
 }
 
 .dashboard-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-  grid-auto-rows: minmax(15rem, auto);
+  grid-template-columns: repeat(auto-fit, minmax(32.7rem, 1fr));
+  grid-auto-rows: minmax(20.3rem, auto);
   gap: 3.2rem;
 }
 @media (min-width: 1024px) {
@@ -172,7 +184,7 @@ a:hover {
   }
 }
 
-@media (min-width: 800px) and (max-width: 1023px) {
+@media (min-width: 500px) and (max-width: 1023px) {
   .dashboard-grid {
     grid-template-columns: repeat(3, 1fr);
   }

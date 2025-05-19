@@ -8,8 +8,11 @@
 
 .dashboard-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-  grid-auto-rows: minmax(15rem, auto);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(32.7rem, 1fr)
+  ); // mobile layout
+  grid-auto-rows: minmax(20.3rem, auto);
   gap: $space-400;
 
   @media (min-width: $breakpoint-lg) {
@@ -17,13 +20,13 @@
   }
 }
 
-// Tablet layout (moved outside so it's global)
-@media (min-width: $breakpoint-md) and (max-width: ($breakpoint-lg - 1)) {
+// Tablet layout
+@media (min-width: $breakpoint-sm) and (max-width: ($breakpoint-lg - 1)) {
   .dashboard-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  // TODO: Move to profile card later
+  // Move to profile card later
   .profile-card {
     grid-column: 1 / -1; // span all columns
     grid-row: auto;

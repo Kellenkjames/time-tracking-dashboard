@@ -3,65 +3,77 @@
 @use '../abstracts/mixins' as *;
 
 // ---------------------------------------------
-// PROFILE - Styles for the main profile sidebar card
+// PROFILE - Main profile sidebar card
 // ---------------------------------------------
 
 .profile-card {
   @include flex-column(center, start, nowrap);
-  background-color: $color-accent-purple;
-  border-radius: 1.5rem;
-  padding-top: $space-400;
-  padding-left: $space-400;
-  padding-right: 8.5rem;
-  padding-bottom: 9.2rem;
 
+  @media (min-width: $breakpoint-lg) {
+    grid-column: 1 / 2;
+    grid-row: span 2;
+  }
+
+  // ----------------------------
+  // HEADER
+  // ----------------------------
   &__header {
     @include flex-column(center, start, nowrap);
-    gap: $space-100;
+    background-color: $color-accent-purple;
+    border-radius: $space-300; // 1.5rem
+    padding: $space-400 $space-850 $space-920 $space-400;
+    position: relative;
+    z-index: 2;
 
-    img {
-      width: 7.8rem;
+    .profile-card__avatar {
+      width: $avatar-size;
       border-radius: 50%;
       border: 3px solid $white;
       margin-bottom: $space-500;
     }
+
+    .profile-card__subtitle {
+      @include text-preset-6;
+      color: $color-text-muted;
+    }
+
+    .profile-card__name {
+      @include text-preset-2;
+      color: $color-text-heading;
+    }
   }
 
-  &__subtitle {
-    @include text-preset-6;
-    color: $color-text-muted;
-  }
-
-  &__name {
-    @include text-preset-2;
-    color: $color-text-heading;
+  // ----------------------------
+  // FOOTER
+  // ----------------------------
+  &__footer {
+    background-color: $color-bg-primary;
+    border-bottom-left-radius: $space-300;
+    border-bottom-right-radius: $space-300;
+    width: 100%;
+    transform: translateY(-1rem);
   }
 
   &__timeframe-toggle {
     @include flex-column(center, start, nowrap);
-    border-radius: 1.5rem;
-    background: $color-bg-primary;
+    gap: $space-210;
+    padding: $space-280 $space-1550 $space-280 $space-400;
   }
 
+  // ----------------------------
+  // TOGGLE LINKS
+  // ----------------------------
   &__link {
+    @include text-preset-5-regular;
     all: unset;
     cursor: pointer;
     font: inherit;
     color: inherit;
-    padding: 0;
-    margin: 0;
-    background: none;
-    border: none;
     transition: color 0.2s ease, background-color 0.2s ease;
 
     &:focus-visible {
       outline: 2px dashed $color-text-heading;
       outline-offset: 4px;
     }
-  }
-
-  @media (min-width: $breakpoint-lg) {
-    grid-row: span 2; // span 2 rows
-    grid-column: 1 / 2; // stay in first column
   }
 }

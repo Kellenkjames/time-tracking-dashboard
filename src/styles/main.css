@@ -31,6 +31,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
 img,
 picture,
 svg {
@@ -153,12 +160,12 @@ a:hover {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: flex-start;
-  background-color: #5747ea;
-  border-radius: 1.5rem;
-  padding-top: 3.2rem;
-  padding-left: 3.2rem;
-  padding-right: 8.5rem;
-  padding-bottom: 9.2rem;
+}
+@media (min-width: 1024px) {
+  .profile-card {
+    grid-column: 1/2;
+    grid-row: span 2;
+  }
 }
 .profile-card__header {
   display: flex;
@@ -166,25 +173,36 @@ a:hover {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: flex-start;
-  gap: 0.8rem;
+  background-color: #5747ea;
+  border-radius: 2.4rem;
+  padding: 3.2rem 8.5rem 9.2rem 3.2rem;
+  position: relative;
+  z-index: 2;
 }
-.profile-card__header img {
+.profile-card__header .profile-card__avatar {
   width: 7.8rem;
   border-radius: 50%;
   border: 3px solid #ffffff;
   margin-bottom: 4rem;
 }
-.profile-card__subtitle {
+.profile-card__header .profile-card__subtitle {
   font-weight: 400;
   font-size: clamp(1.4rem, 1vw + 1rem, 1.5rem);
   line-height: 1.8rem;
   color: #bbc0ff;
 }
-.profile-card__name {
+.profile-card__header .profile-card__name {
   font-weight: 300;
   font-size: 4rem;
   line-height: 4.7rem;
   color: #ffffff;
+}
+.profile-card__footer {
+  background-color: #1c204b;
+  border-bottom-left-radius: 2.4rem;
+  border-bottom-right-radius: 2.4rem;
+  width: 100%;
+  transform: translateY(-1rem);
 }
 .profile-card__timeframe-toggle {
   display: flex;
@@ -192,29 +210,22 @@ a:hover {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: flex-start;
-  border-radius: 1.5rem;
-  background: #1c204b;
+  gap: 2.1rem;
+  padding: 2.8rem 15.5rem 2.8rem 3.2rem;
 }
 .profile-card__link {
+  font-weight: 400;
+  font-size: clamp(1.6rem, 1.5vw + 1rem, 1.8rem);
+  line-height: 2.1rem;
   all: unset;
   cursor: pointer;
   font: inherit;
   color: inherit;
-  padding: 0;
-  margin: 0;
-  background: none;
-  border: none;
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 .profile-card__link:focus-visible {
   outline: 2px dashed #ffffff;
   outline-offset: 4px;
-}
-@media (min-width: 1024px) {
-  .profile-card {
-    grid-row: span 2;
-    grid-column: 1/2;
-  }
 }
 
 .layout-container {

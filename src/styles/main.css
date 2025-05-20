@@ -220,12 +220,18 @@ a:hover {
   all: unset;
   cursor: pointer;
   font: inherit;
-  color: inherit;
-  transition: color 0.2s ease, background-color 0.2s ease;
+  color: #7078c9;
+  transition: color 0.2s ease;
+}
+.profile-card__link:hover {
+  color: #ffffff;
 }
 .profile-card__link:focus-visible {
   outline: 2px dashed #ffffff;
   outline-offset: 4px;
+}
+.profile-card__link--active {
+  color: #ffffff;
 }
 
 .layout-container {

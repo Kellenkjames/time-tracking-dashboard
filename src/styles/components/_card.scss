@@ -3,5 +3,85 @@
 @use '../abstracts/mixins' as *;
 
 // ---------------------------------------------
-// CARD - Styles for each dashboard tile (work, play, etc.)
+// DASHBOARD CARD — Activity card component
 // ---------------------------------------------
+
+.dashboard-card {
+  position: relative;
+  border-radius: $card-border-radius;
+  background-color: $color-bg-card;
+  max-height: fit-content;
+
+  // Pseudo background layer (colored top)
+  &::before {
+    content: '';
+    position: absolute;
+    top: -4rem;
+    right: 0;
+    width: 100%;
+    height: 10rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top 0 right 1.5rem;
+    border-top-left-radius: $card-border-radius;
+    border-top-right-radius: $card-border-radius;
+    z-index: -1;
+  }
+
+  &--work::before {
+    background-color: $color-accent-orange;
+    background-image: url('/src/assets/images/icon-work.svg');
+  }
+
+  // Add more variants here (play, study, etc.)
+
+  // Inner content container
+  &__inner {
+    position: relative;
+    background-color: $color-bg-card;
+    border-radius: $space-300;
+    padding-block: 3.1rem;
+    padding-inline: 3.25rem;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  // Top row (title + icon)
+  &__top {
+    @include flex-row(between, center, nowrap);
+    margin-bottom: $space-300;
+  }
+
+  &__title {
+    @include text-preset-5-medium;
+    color: $color-text-heading;
+  }
+
+  &__menu-icon {
+    display: inline-block;
+    width: 2rem;
+    height: 0.5rem;
+    background-image: url('/src/assets/images/icon-ellipsis.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  // Bottom row (hours + subtitle)
+  &__bottom {
+    @include flex-column(start, start);
+  }
+
+  &__hours {
+    @include card-hour-text;
+    color: $color-text-heading;
+    margin-bottom: $space-100;
+  }
+
+  &__subtitle {
+    @include text-preset-6;
+    color: $color-text-muted;
+  }
+}

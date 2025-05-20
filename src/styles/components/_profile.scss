@@ -20,7 +20,7 @@
   &__header {
     @include flex-column(center, start, nowrap);
     background-color: $color-accent-purple;
-    border-radius: $space-300; // 1.5rem
+    border-radius: $card-border-radius;
     padding: $space-400 $space-850 $space-920 $space-400;
     position: relative;
     z-index: 2;
@@ -47,7 +47,7 @@
   // FOOTER
   // ----------------------------
   &__footer {
-    background-color: $color-bg-primary;
+    background-color: $color-bg-card;
     border-bottom-left-radius: $space-300;
     border-bottom-right-radius: $space-300;
     width: 100%;

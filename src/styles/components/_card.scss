@@ -7,45 +7,33 @@
 // ---------------------------------------------
 
 .dashboard-card {
-  position: relative;
+  @include flex-column(start, start);
   border-radius: $card-border-radius;
-  background-color: $color-bg-card;
-  max-height: fit-content;
+  overflow: hidden;
+  background-color: transparent;
 
-  // Pseudo background layer (colored top)
-  &::before {
-    content: '';
-    position: absolute;
-    top: -4rem;
-    right: 0;
+  &__bg {
     width: 100%;
-    height: 10rem;
-    background-size: contain;
+    height: 6.5rem; // match Figma
+    background-size: initial;
     background-repeat: no-repeat;
-    background-position: top 0 right 1.5rem;
+    background-position: top right 1.5rem;
     border-top-left-radius: $card-border-radius;
     border-top-right-radius: $card-border-radius;
-    z-index: -1;
   }
 
-  &--work::before {
+  &--work {
     background-color: $color-accent-orange;
     background-image: url('/src/assets/images/icon-work.svg');
   }
 
-  // Add more variants here (play, study, etc.)
-
-  // Inner content container
   &__inner {
-    position: relative;
+    @include flex-column(start, space-between, center);
+    width: 100%;
     background-color: $color-bg-card;
-    border-radius: $space-300;
-    padding-block: 3.1rem;
-    padding-inline: 3.25rem;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    border-radius: $card-border-radius;
+    padding: 3.2rem 3.25rem 3.1rem;
+    transform: translateY(-$space-200);
   }
 
   // Top row (title + icon)

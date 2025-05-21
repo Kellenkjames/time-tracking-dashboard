@@ -155,40 +155,39 @@ a:hover {
 }
 
 .dashboard-card {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
   border-radius: 1.5rem;
-  background-color: #0e1323;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
+  overflow: hidden;
+  background-color: transparent;
 }
-.dashboard-card::before {
-  content: "";
-  position: absolute;
-  top: -4rem;
-  right: 0;
+.dashboard-card__bg {
   width: 100%;
-  height: 10rem;
-  background-size: contain;
+  height: 6.5rem;
+  background-size: initial;
   background-repeat: no-repeat;
-  background-position: top 0 right 1.5rem;
+  background-position: top right 1.5rem;
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
-  z-index: -1;
 }
-.dashboard-card--work::before {
+.dashboard-card--work {
   background-color: #ff8b64;
   background-image: url("/src/assets/images/icon-work.svg");
 }
 .dashboard-card__inner {
-  position: relative;
-  background-color: #0e1323;
-  border-radius: 2.4rem;
-  padding-block: 3.1rem;
-  padding-inline: 3.25rem;
-  z-index: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: center;
+  justify-content: flex-start;
+  align-items: space-between;
+  width: 100%;
+  background-color: #0e1323;
+  border-radius: 1.5rem;
+  padding: 3.2rem 3.25rem 3.1rem;
+  transform: translateY(-1.6rem);
 }
 .dashboard-card__top {
   display: flex;
@@ -289,7 +288,6 @@ a:hover {
   border-bottom-left-radius: 2.4rem;
   border-bottom-right-radius: 2.4rem;
   width: 100%;
-  transform: translateY(-1rem);
 }
 .profile-card__timeframe-toggle {
   display: flex;

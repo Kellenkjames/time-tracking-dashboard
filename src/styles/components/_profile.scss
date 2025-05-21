@@ -7,40 +7,40 @@
 // ---------------------------------------------
 
 .profile-card {
-  @include flex-column(center, start);
+  @include flex-column(start, start);
+  height: 100%;
 
   @media (min-width: $breakpoint-lg) {
     grid-column: 1 / 2;
     grid-row: span 2;
-  }
 
-  // ----------------------------
-  // HEADER
-  // ----------------------------
-  &__header {
-    @include flex-column(center, start);
-    background-color: $color-accent-purple;
-    border-radius: $card-border-radius;
-    padding: $space-400 $space-850 $space-920 $space-400;
-    position: relative;
-    z-index: 2;
-
-    .profile-card__avatar {
+    &__avatar {
       width: $avatar-size;
       border-radius: 50%;
       border: 3px solid $white;
       margin-bottom: $space-500;
     }
 
-    .profile-card__subtitle {
+    &__subtitle {
       @include text-preset-6;
       color: $color-text-muted;
     }
 
-    .profile-card__name {
+    &__name {
       @include text-preset-2;
       color: $color-text-heading;
     }
+  }
+
+  // ----------------------------
+  // HEADER
+  // ----------------------------
+  &__header {
+    @include flex-column(start, start);
+    background-color: $color-accent-purple;
+    border-radius: $card-border-radius;
+    padding: $space-400 $space-850 $space-920 $space-400;
+    transform: translateY($space-200);
   }
 
   // ----------------------------
@@ -48,14 +48,12 @@
   // ----------------------------
   &__footer {
     background-color: $color-bg-card;
-    border-bottom-left-radius: $space-300;
-    border-bottom-right-radius: $space-300;
+    border-radius: $card-border-radius;
     width: 100%;
-    // transform: translateY(-1rem);
   }
 
   &__timeframe-toggle {
-    @include flex-column(center, start, nowrap);
+    @include flex-column(center, start);
     gap: $space-210;
     padding: $space-280 $space-1550 $space-280 $space-400;
   }

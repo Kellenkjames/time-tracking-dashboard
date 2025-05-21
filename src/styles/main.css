@@ -177,6 +177,26 @@ a:hover {
   background-color: #ff8b64;
   background-image: url("/src/assets/images/icon-work.svg");
 }
+.dashboard-card--play {
+  background-color: #55c2e6;
+  background-image: url("/src/assets/images/icon-play.svg");
+}
+.dashboard-card--study {
+  background-color: #ff5e7d;
+  background-image: url("/src/assets/images/icon-study.svg");
+}
+.dashboard-card--exercise {
+  background-color: #4bcf82;
+  background-image: url("/src/assets/images/icon-exercise.svg");
+}
+.dashboard-card--social {
+  background-color: #5747ea;
+  background-image: url("/src/assets/images/icon-social.svg");
+}
+.dashboard-card--self-care {
+  background-color: #f1c75b;
+  background-image: url("/src/assets/images/icon-self-care.svg");
+}
 .dashboard-card__inner {
   display: flex;
   flex-direction: column;
@@ -244,49 +264,48 @@ a:hover {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
+  height: 100%;
 }
 @media (min-width: 1024px) {
   .profile-card {
     grid-column: 1/2;
     grid-row: span 2;
   }
+  .profile-card__avatar {
+    width: 7.8rem;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    margin-bottom: 4rem;
+  }
+  .profile-card__subtitle {
+    font-weight: 400;
+    font-size: clamp(1.4rem, 1vw + 1rem, 1.5rem);
+    line-height: 1.8rem;
+    color: #bbc0ff;
+  }
+  .profile-card__name {
+    font-weight: 300;
+    font-size: 4rem;
+    line-height: 4.7rem;
+    color: #ffffff;
+  }
 }
 .profile-card__header {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   background-color: #5747ea;
   border-radius: 1.5rem;
   padding: 3.2rem 8.5rem 9.2rem 3.2rem;
-  position: relative;
-  z-index: 2;
-}
-.profile-card__header .profile-card__avatar {
-  width: 7.8rem;
-  border-radius: 50%;
-  border: 3px solid #ffffff;
-  margin-bottom: 4rem;
-}
-.profile-card__header .profile-card__subtitle {
-  font-weight: 400;
-  font-size: clamp(1.4rem, 1vw + 1rem, 1.5rem);
-  line-height: 1.8rem;
-  color: #bbc0ff;
-}
-.profile-card__header .profile-card__name {
-  font-weight: 300;
-  font-size: 4rem;
-  line-height: 4.7rem;
-  color: #ffffff;
+  transform: translateY(1.6rem);
 }
 .profile-card__footer {
   background-color: #0e1323;
-  border-bottom-left-radius: 2.4rem;
-  border-bottom-right-radius: 2.4rem;
+  border-radius: 1.5rem;
   width: 100%;
 }
 .profile-card__timeframe-toggle {

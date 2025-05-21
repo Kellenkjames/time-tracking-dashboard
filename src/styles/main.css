@@ -273,24 +273,24 @@ a:hover {
     grid-column: 1/2;
     grid-row: span 2;
   }
-  .profile-card__avatar {
-    width: 7.8rem;
-    border-radius: 50%;
-    border: 3px solid #ffffff;
-    margin-bottom: 4rem;
-  }
-  .profile-card__subtitle {
-    font-weight: 400;
-    font-size: clamp(1.4rem, 1vw + 1rem, 1.5rem);
-    line-height: 1.8rem;
-    color: #bbc0ff;
-  }
-  .profile-card__name {
-    font-weight: 300;
-    font-size: 4rem;
-    line-height: 4.7rem;
-    color: #ffffff;
-  }
+}
+.profile-card__avatar {
+  width: 7.8rem;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  margin-bottom: 4rem;
+}
+.profile-card__subtitle {
+  font-weight: 400;
+  font-size: clamp(1.4rem, 1vw + 1rem, 1.5rem);
+  line-height: 1.8rem;
+  color: #bbc0ff;
+}
+.profile-card__name {
+  font-weight: 300;
+  font-size: 4rem;
+  line-height: 4.7rem;
+  color: #ffffff;
 }
 .profile-card__header {
   display: flex;

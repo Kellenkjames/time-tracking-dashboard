@@ -8,6 +8,7 @@
 
 .profile-card {
   @include flex-column(start, start);
+  padding-bottom: $space-200;
   height: 100%;
 
   @media (min-width: $breakpoint-lg) {
@@ -40,16 +41,17 @@
     background-color: $color-accent-purple;
     border-radius: $card-border-radius;
     padding: $space-400 $space-850 $space-920 $space-400;
-    transform: translateY($space-200);
   }
 
   // ----------------------------
   // FOOTER
   // ----------------------------
   &__footer {
+    flex: 1;
     background-color: $color-bg-card;
     border-radius: $card-border-radius;
     width: 100%;
+    margin-top: -$space-200;
   }
 
   &__timeframe-toggle {

@@ -266,6 +266,7 @@ a:hover {
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
+  padding-bottom: 1.6rem;
   height: 100%;
 }
 @media (min-width: 1024px) {
@@ -301,12 +302,13 @@ a:hover {
   background-color: #5747ea;
   border-radius: 1.5rem;
   padding: 3.2rem 8.5rem 9.2rem 3.2rem;
-  transform: translateY(1.6rem);
 }
 .profile-card__footer {
+  flex: 1;
   background-color: #0e1323;
   border-radius: 1.5rem;
   width: 100%;
+  margin-top: -1.6rem;
 }
 .profile-card__timeframe-toggle {
   display: flex;
@@ -352,7 +354,7 @@ a:hover {
 @media (min-width: 1024px) {
   .layout-container {
     max-width: 111.6rem;
-    margin-block: 25.2rem;
+    margin-top: 25.2rem;
   }
 }
 

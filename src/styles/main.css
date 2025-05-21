@@ -299,6 +299,7 @@ a:hover {
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
+  width: 100%;
   background-color: #5747ea;
   border-radius: 1.5rem;
   padding: 3.2rem 8.5rem 9.2rem 3.2rem;

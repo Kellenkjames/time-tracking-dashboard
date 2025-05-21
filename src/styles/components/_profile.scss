@@ -38,6 +38,7 @@
   // ----------------------------
   &__header {
     @include flex-column(start, start);
+    width: 100%;
     background-color: $color-accent-purple;
     border-radius: $card-border-radius;
     padding: $space-400 $space-850 $space-920 $space-400;

@@ -7,7 +7,7 @@
 // ---------------------------------------------
 
 .profile-card {
-  @include flex-column(center, start, nowrap);
+  @include flex-column(center, start);
 
   @media (min-width: $breakpoint-lg) {
     grid-column: 1 / 2;
@@ -18,7 +18,7 @@
   // HEADER
   // ----------------------------
   &__header {
-    @include flex-column(center, start, nowrap);
+    @include flex-column(center, start);
     background-color: $color-accent-purple;
     border-radius: $card-border-radius;
     padding: $space-400 $space-850 $space-920 $space-400;

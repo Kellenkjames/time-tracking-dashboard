@@ -70,7 +70,6 @@
 
   &__title {
     @include text-preset-5-medium;
-    color: $color-text-heading;
   }
 
   &__menu-icon {
@@ -87,11 +86,14 @@
   &__bottom {
     @include flex-column(start, start);
     width: 100%;
+
+    @media (max-width: $breakpoint-sm) {
+      @include flex-row(space-between, center, wrap);
+    }
   }
 
   &__hours {
     @include card-hour-text;
-    color: $color-text-heading;
     margin-bottom: $space-100;
   }
 

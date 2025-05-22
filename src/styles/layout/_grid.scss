@@ -8,12 +8,13 @@
 
 .dashboard-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(32.7rem, 1fr)
-  ); // mobile layout
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); // mobile layout
   grid-auto-rows: minmax(20.3rem, auto);
   gap: $space-400;
+
+  @media (min-width: $breakpoint-xs) {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
 
   @media (min-width: $breakpoint-lg) {
     grid-template-columns: 1fr repeat(3, 1fr); // 4-column layout

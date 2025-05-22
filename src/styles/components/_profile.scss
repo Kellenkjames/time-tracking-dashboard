@@ -37,6 +37,7 @@
   // HEADER
   // ----------------------------
   &__header {
+    position: relative;
     @include flex-column(start, start);
     width: 100%;
     background-color: $color-accent-purple;
@@ -58,7 +59,12 @@
   &__timeframe-toggle {
     @include flex-column(center, start);
     gap: $space-210;
-    padding: $space-280 $space-1550 $space-280 $space-400;
+    padding: ($space-280 * 1.7) $space-1550 $space-280 $space-400;
+
+    @media (max-width: $breakpoint-sm) {
+      @include flex-row(space-between, center, wrap);
+      padding: 5rem 4rem 3rem;
+    }
   }
 
   // ----------------------------

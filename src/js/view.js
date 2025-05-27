@@ -1,37 +1,28 @@
-/*
+export default class cardView {
+  dashboardGrid = document.querySelector('.dashboard-grid');
 
-✅ 1. What is the job of each file?
-model.js
-Ask yourself:
+  renderCards(data) {
+    const markup = data
+      .map(card => {
+        const type = card.title.toLowerCase().replace(/\s+/g, '-');
+        return `
+        <div class="dashboard-card">
+          <div class="dashboard-card__bg dashboard-card--${type}"></div>
+          <div class="dashboard-card__inner">
+            <div class="dashboard-card__top">
+              <p class="dashboard-card__title">${card.title}</p>
+              <span class="dashboard-card__menu-icon" aria-hidden="true"></span>
+            </div>
+            <div class="dashboard-card__bottom">
+              <p class="dashboard-card__hours">${card.current}hrs</p>
+              <p class="dashboard-card__subtitle">Last Week - ${card.previous}hrs</p>
+            </div>
+          </div>
+        </div>
+      `;
+      })
+      .join('');
 
-What state does the app need to hold? (e.g., active timeframe, data set?)
-
-What responsibilities belong only to the model layer?
-
-Should the model return raw or processed data to the view?
-
-Think: “What do I want the view to ask me for, and how should I respond?”
-
-view.js
-
-* Challenge:
-
-What part of the UI changes when the timeframe changes?
-
-- Each grid card activity card changes when the timeframe changes
-
-What responsibilities should the view have no knowledge of? (e.g., it shouldn’t know about JSON or app state)
-
-- The view shouldn't know about the model which will hold the JSON file
-- The view shouldn't know about the app state
-
-What should be dynamic vs. static markup?
-- Dynamic = JSON data which represents
-- Static = Button links which represent each timeframe, daily, weekly, monthly
-
-Ask: “If the model gives me clean data, how do I visually represent it with consistent structure?”
-
-The model will be responsible for tracking app state and providing clean data (JSON data) to the view layer
-
-
-*/
+    this.dashboardGrid.innerHTML = markup;
+  }
+}

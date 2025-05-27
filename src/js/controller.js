@@ -1,6 +1,17 @@
 import { getDataByTimeframe, setData } from './model.js';
 import view from './view.js';
 
+/**
+ * Initializes the time tracking dashboard on page load.
+ *
+ * @async
+ * @function init
+ * @description
+ * Fetches JSON data, loads it into the model, and triggers the initial render of the dashboard.
+ * Also highlights the default active timeframe button for visual feedback.
+ *
+ * @returns {Promise<void>} Resolves after the initial render is complete
+ */
 async function init() {
   try {
     const response = await fetch('../../data.json');

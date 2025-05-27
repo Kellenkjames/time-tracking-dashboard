@@ -23,4 +23,23 @@ const setActiveTimeframe = function (timeframe) {
   state.activeTimeframe = timeframe;
 };
 
-export { setActiveTimeframe, setData };
+/**
+ * Returns the currently selected timeframe (e.g., 'daily', 'weekly', 'monthly').
+ *
+ * @returns {string}
+ */
+const getActiveTimeframe = () => state.activeTimeframe;
+
+/**
+ * Returns a simplified array of data based on the currently active timeframe.
+ *
+ * @returns {Array<{title: string, current: number, previous: number}>}
+ */
+const getDataByTimeframe = () => {
+  return state.data.map(({ title, timeframes }) => {
+    const { current, previous } = timeframes[state.activeTimeframe];
+    return { title, current, previous };
+  });
+};
+
+export { getActiveTimeframe, getDataByTimeframe, setActiveTimeframe, setData };

@@ -1,5 +1,6 @@
 export default class cardView {
   dashboardGrid = document.querySelector('.dashboard-grid');
+  profileCardButtons = document.querySelectorAll('[data-timeframe]');
 
   renderCards(data) {
     const markup = data
@@ -24,5 +25,14 @@ export default class cardView {
       .join('');
 
     this.dashboardGrid.innerHTML = markup;
+  }
+
+  highlightActiveButton(timeframe) {
+    this.profileCardButtons.forEach(button => {
+      const buttonTimeframe = button.dataset.timeframe;
+      buttonTimeframe === timeframe
+        ? button.classList.add('active')
+        : button.classList.remove('active');
+    });
   }
 }

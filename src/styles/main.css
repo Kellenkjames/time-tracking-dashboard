@@ -82,39 +82,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Rubik", sans-serif;
-  font-size: 1.6rem;
-  font-weight: 400;
-  color: #ffffff;
-  line-height: 1.5;
-}
-
-h1 {
-  font-size: clamp(2.4rem, 4vw, 3.6rem);
-  font-weight: 700;
-}
-
-h2 {
-  font-size: clamp(2rem, 3vw, 3.2rem);
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-h4 {
-  font-size: 1.8rem;
-  font-weight: 400;
-}
-
 h1,
 h2,
 h3,

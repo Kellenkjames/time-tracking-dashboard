@@ -17,9 +17,9 @@ $font-size-card-label: 1.4rem;
 // ---------------------------------------------
 // FLUID TYPOGRAPHY SCALE — clamp() values
 // ---------------------------------------------
-$font-size-1-fluid: clamp(3.6rem, 5vw + 1rem, 5.6rem); // Targeting 56px max
-$font-size-2-fluid: clamp(2.8rem, 3vw + 1rem, 4rem); // Targeting 40px max
-$font-size-3-fluid: clamp(2.4rem, 2vw + 1rem, 3.2rem); // Targeting 32px max
+$font-size-1-fluid: clamp(3.6rem, 5vw + 1rem, 5.6rem);
+$font-size-2-fluid: clamp(2.8rem, 3vw + 1rem, 4rem);
+$font-size-3-fluid: clamp(2.4rem, 2vw + 1rem, 3.2rem);
 $font-size-4-fluid: clamp(2rem, 2vw + 1rem, 2.4rem);
 $font-size-5-fluid: clamp(1.6rem, 1.5vw + 1rem, 1.8rem);
 $font-size-6-fluid: clamp(1.4rem, 1vw + 1rem, 1.4rem);
@@ -27,7 +27,7 @@ $font-size-6-fluid: clamp(1.4rem, 1vw + 1rem, 1.4rem);
 // ---------------------------------------------
 // TYPOGRAPHY SCALE — Font Sizes + Line Heights
 // ---------------------------------------------
-$font-size-1: 5.6rem; // 56px
+$font-size-1: 5.6rem;
 $line-height-1: 6.6rem;
 
 $font-size-2: 4rem;
@@ -96,11 +96,12 @@ $space-400: 3.2rem; // 32px
 $space-500: 4rem; // 40px
 
 // Additional space tokens
-$space-210: 2.1rem;
-$space-280: 2.8rem;
-$space-850: 8.5rem; // Used for header padding-right
-$space-920: 9.2rem; // Used for header padding-bottom
-$space-1550: 15.5rem; // Used for timeframe-toggle padding-right
+$space-custom-210: 2.1rem;
+$space-custom-280: 2.8rem;
+$space-custom-850: 8.5rem; // Used for header padding-right
+$space-custom-920: 9.2rem; // Used for header padding-bottom
+$space-custom-1550: 15.5rem; // Used for timeframe-toggle padding-right
+
 $avatar-size: 7.8rem;
 
 // Card visuals
@@ -113,6 +114,14 @@ $card-padding-bottom: 3.1rem;
 // BORDER RADIUS
 // ---------------------------------------------
 $card-border-radius: 1.5rem;
+
+// ---------------------------------------------
+// Z-INDEX
+// ---------------------------------------------
+$z-base: 1;
+$z-dropdown: 100;
+$z-modal: 1000;
+$z-toast: 1100;
 
 // ---------------------------------------------
 // BREAKPOINTS

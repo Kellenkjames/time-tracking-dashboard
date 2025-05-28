@@ -50,7 +50,7 @@
     width: 100%;
     background-color: $color-accent-purple;
     border-radius: $card-border-radius;
-    padding: $space-400 $space-850 $space-920 $space-400;
+    padding: $space-400 $space-custom-850 $space-custom-920 $space-400;
 
     @media (max-width: $breakpoint-lg) {
       @include flex-row(start, center, nowrap);
@@ -72,8 +72,9 @@
 
   &__timeframe-toggle {
     @include flex-column(center, start);
-    gap: $space-210;
-    padding: ($space-280 * 1.7) $space-1550 $space-280 $space-400;
+    gap: $space-custom-210;
+    padding: ($space-custom-280 * 1.7) $space-custom-1550 $space-custom-280
+      $space-400;
 
     @media (max-width: $breakpoint-lg) {
       @include flex-row(center, center, nowrap);

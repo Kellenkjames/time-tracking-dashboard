@@ -1,5 +1,3 @@
-// model.js — owns app state and provides data for the view
-
 const state = {
   data: [],
   activeTimeframe: 'weekly',

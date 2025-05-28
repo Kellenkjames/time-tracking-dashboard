@@ -4,7 +4,9 @@ import {
   setActiveTimeframe,
   setData,
 } from './model.js';
-import view from './view.js';
+import CardView from './view.js';
+
+const view = new CardView();
 
 /**
  * Initializes the time tracking dashboard on page load.

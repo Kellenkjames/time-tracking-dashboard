@@ -1,4 +1,4 @@
-export default class cardView {
+export default class CardView {
   dashboardGrid = document.querySelector('.dashboard-grid');
   profileCardButtons = document.querySelectorAll('[data-timeframe]');
 
@@ -24,7 +24,13 @@ export default class cardView {
       })
       .join('');
 
-    this.dashboardGrid.innerHTML = markup;
+    // Clear only the existing dashboard cards (if any)
+    const oldCards = this.dashboardGrid.querySelectorAll(
+      '.dashboard-card:not(.profile-card)'
+    );
+    oldCards.forEach(card => card.remove());
+
+    this.dashboardGrid.insertAdjacentHTML('beforeend', markup);
   }
 
   highlightActiveButton(timeframe) {

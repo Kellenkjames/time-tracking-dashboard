@@ -37,8 +37,8 @@ export default class CardView {
     this.profileCardButtons.forEach(button => {
       const buttonTimeframe = button.dataset.timeframe;
       buttonTimeframe === timeframe
-        ? button.classList.add('active')
-        : button.classList.remove('active');
+        ? button.classList.add('profile-card__link--active')
+        : button.classList.remove('profile-card__link--active');
     });
   }
 }

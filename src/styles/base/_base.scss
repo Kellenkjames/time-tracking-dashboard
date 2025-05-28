@@ -22,19 +22,11 @@ body {
   font-size: $font-size-body;
   font-weight: $font-weight-regular;
   color: $white;
+  line-height: 1.5;
+  overscroll-behavior-x: none;
+
+  // Optional: since you now control this here
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-// ---------------------------------------------
-// ACCESSIBILITY UTILITIES
-// ---------------------------------------------
-
-.visually-hidden {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap;
 }

@@ -44,26 +44,31 @@ async function init() {
   }
 }
 
+const setupEventListeners = () => {
+  const btnsContainer = document.querySelector(
+    '.profile-card__timeframe-toggle'
+  );
+
+  btnsContainer.addEventListener('click', e => {
+    const btn = e.target.closest('[data-timeframe]');
+    if (!btn) return;
+
+    const newTimeframe = btn.dataset.timeframe;
+    console.log(`Timeframe selected: ${newTimeframe}`);
+
+    // Call model.setActiveTimeframe(newTimeframe)
+    setActiveTimeframe(newTimeframe);
+
+    // Get new filtered data: model.getDataByTimeframe()
+    const newData = getDataByTimeframe();
+
+    // Call view.renderCards(newData)
+    view.renderCards(newData);
+
+    // Call view.highlightActiveButton(newTimeframe)
+    view.highlightActiveButton(newTimeframe);
+  });
+};
+
 init();
-
-const btnsContainer = document.querySelector('.profile-card__timeframe-toggle');
-
-btnsContainer.addEventListener('click', e => {
-  const btn = e.target.closest('[data-timeframe]');
-  if (!btn) return;
-
-  const newTimeframe = btn.dataset.timeframe;
-  console.log(`Timeframe selected: ${newTimeframe}`);
-
-  // Call model.setActiveTimeframe(newTimeframe)
-  setActiveTimeframe(newTimeframe);
-
-  // Get new filtered data: model.getDataByTimeframe()
-  const newData = getDataByTimeframe();
-
-  // Call view.renderCards(newData)
-  view.renderCards(newData);
-
-  // Call view.highlightActiveButton(newTimeframe)
-  view.highlightActiveButton(newTimeframe);
-});
+setupEventListeners();

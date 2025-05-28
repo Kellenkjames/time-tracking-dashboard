@@ -28,24 +28,29 @@ async function init() {
     }
 
     const data = await response.json();
-    console.log('Data loaded:', data);
-
-    // Load data into model state
     setData(data);
 
-    // Pull filtered version based on current timeframe
     const cards = getDataByTimeframe();
 
-    // Render cards to the dashboard
     view.renderCards(cards);
-
-    // Highlight the default active button
     view.highlightActiveButton(getActiveTimeframe());
   } catch (error) {
     console.error('Error fetching or parsing data.json:', error);
   }
 }
 
+/**
+ * Sets up event delegation for timeframe toggle buttons.
+ *
+ * @function setupEventListeners
+ * @description
+ * Attaches a single click listener to the timeframe button container.
+ * On button click, it updates the app state with the selected timeframe,
+ * fetches the filtered data, and triggers a re-render of the dashboard UI.
+ *
+ * This function ensures that UI updates remain decoupled from direct DOM manipulation
+ * and are driven by state changes, following MVC principles.
+ */
 const setupEventListeners = () => {
   const btnsContainer = document.querySelector(
     '.profile-card__timeframe-toggle'
@@ -56,18 +61,11 @@ const setupEventListeners = () => {
     if (!btn) return;
 
     const newTimeframe = btn.dataset.timeframe;
-    console.log(`Timeframe selected: ${newTimeframe}`);
-
-    // Call model.setActiveTimeframe(newTimeframe)
     setActiveTimeframe(newTimeframe);
 
-    // Get new filtered data: model.getDataByTimeframe()
     const newData = getDataByTimeframe();
 
-    // Call view.renderCards(newData)
     view.renderCards(newData);
-
-    // Call view.highlightActiveButton(newTimeframe)
     view.highlightActiveButton(newTimeframe);
   });
 };

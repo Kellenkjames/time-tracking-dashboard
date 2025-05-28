@@ -6,19 +6,19 @@
 
 @mixin text-preset-1 {
   font-weight: $font-weight-light;
-  font-size: $font-size-1;
+  font-size: $font-size-1-fluid;
   line-height: $line-height-1;
 }
 
 @mixin text-preset-2 {
   font-weight: $font-weight-light;
-  font-size: $font-size-2;
+  font-size: $font-size-2-fluid;
   line-height: $line-height-2;
 }
 
 @mixin text-preset-3 {
   font-weight: $font-weight-light;
-  font-size: $font-size-3;
+  font-size: $font-size-3-fluid;
   line-height: $line-height-3;
 }
 

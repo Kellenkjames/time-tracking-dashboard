@@ -16,11 +16,19 @@
     grid-row: span 2;
   }
 
+  @media (max-width: $breakpoint-lg) {
+    padding-bottom: 0;
+  }
+
   &__avatar {
     width: $avatar-size;
     border-radius: 50%;
     border: 3px solid $white;
     margin-bottom: $space-500;
+
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 0;
+    }
   }
 
   &__subtitle {
@@ -43,6 +51,12 @@
     background-color: $color-accent-purple;
     border-radius: $card-border-radius;
     padding: $space-400 $space-850 $space-920 $space-400;
+
+    @media (max-width: $breakpoint-lg) {
+      @include flex-row(start, center, nowrap);
+      gap: $space-300;
+      padding: 3.45rem 3.45rem 3.45rem $space-400;
+    }
   }
 
   // ----------------------------
@@ -61,9 +75,13 @@
     gap: $space-210;
     padding: ($space-280 * 1.7) $space-1550 $space-280 $space-400;
 
+    @media (max-width: $breakpoint-lg) {
+      @include flex-row(center, center, nowrap);
+      gap: $space-500;
+    }
+
     @media (max-width: $breakpoint-sm) {
-      @include flex-row(space-between, center, wrap);
-      padding: 5rem 4rem 3rem;
+      padding: 4rem 2rem 2rem;
     }
   }
 

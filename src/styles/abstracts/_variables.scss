@@ -17,6 +17,9 @@ $font-size-card-label: 1.4rem;
 // ---------------------------------------------
 // FLUID TYPOGRAPHY SCALE — clamp() values
 // ---------------------------------------------
+$font-size-1-fluid: clamp(3.6rem, 5vw + 1rem, 5.6rem); // Targeting 56px max
+$font-size-2-fluid: clamp(2.8rem, 3vw + 1rem, 4rem); // Targeting 40px max
+$font-size-3-fluid: clamp(2.4rem, 2vw + 1rem, 3.2rem); // Targeting 32px max
 $font-size-4-fluid: clamp(2rem, 2vw + 1rem, 2.4rem);
 $font-size-5-fluid: clamp(1.6rem, 1.5vw + 1rem, 1.8rem);
 $font-size-6-fluid: clamp(1.4rem, 1vw + 1rem, 1.4rem);

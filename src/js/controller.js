@@ -1,4 +1,9 @@
-import { getDataByTimeframe, setActiveTimeframe, setData } from './model.js';
+import {
+  getActiveTimeframe,
+  getDataByTimeframe,
+  setActiveTimeframe,
+  setData,
+} from './model.js';
 import view from './view.js';
 
 /**
@@ -33,7 +38,7 @@ async function init() {
     view.renderCards(cards);
 
     // Highlight the default active button
-    view.highlightActiveButton('weekly');
+    view.highlightActiveButton(getActiveTimeframe());
   } catch (error) {
     console.error('Error fetching or parsing data.json:', error);
   }

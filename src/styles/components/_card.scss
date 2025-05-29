@@ -11,6 +11,8 @@
   border-radius: $card-border-radius;
   overflow: hidden;
   background-color: transparent;
+  width: 100%;
+  max-width: 100%; // avoid overflow
 
   &__bg {
     width: 100%;

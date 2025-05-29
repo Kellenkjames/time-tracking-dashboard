@@ -8,21 +8,16 @@
 
 .dashboard-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); // mobile layout
+  grid-template-columns: 1fr; // Mobile default
   grid-auto-rows: minmax(20.3rem, auto);
   gap: $space-400;
+  max-width: 100%;
 
-  // ---------------------------------------------
-  // Desktop-only layout
-  // ---------------------------------------------
-  @media (min-width: $breakpoint-lg) {
-    grid-template-columns: 1fr repeat(3, 1fr); // 4-column layout
+  @media (min-width: $breakpoint-sm) {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   }
 
-  // ---------------------------------------------
-  // Tablet-only layout (600px – 1023px)
-  // ---------------------------------------------
-  @media (min-width: $breakpoint-sm) and (max-width: ($breakpoint-lg - 1)) {
-    grid-template-columns: repeat(3, 1fr);
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: 1fr repeat(3, 1fr); // 4-column layout
   }
 }

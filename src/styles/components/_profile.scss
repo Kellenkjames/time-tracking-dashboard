@@ -44,9 +44,9 @@
     padding: $space-400 $space-custom-850 $space-custom-920 $space-400;
 
     @media (max-width: $breakpoint-lg) {
-      @include flex-row(start, center, nowrap);
+      @include flex-row(start, center, wrap);
       gap: $space-300;
-      padding: 3.45rem 3.45rem 3.45rem $space-400; // precise Figma match
+      padding: 3.45rem 2.45rem 2.45rem $space-400; // precise Figma match
     }
   }
 
@@ -68,7 +68,7 @@
       $space-400;
 
     @media (max-width: $breakpoint-lg) {
-      @include flex-row(center, center, nowrap);
+      @include flex-row(center, center, wrap);
       gap: $space-500;
     }
 

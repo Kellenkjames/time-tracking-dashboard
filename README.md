@@ -33,9 +33,9 @@ A responsive, data-driven dashboard built with semantic HTML, modular SCSS archi
 
 ## Screenshots
 
-| Desktop                                                 | Mobile                                                |
-| ------------------------------------------------------- | ----------------------------------------------------- |
-| ![Desktop Screenshot](./assets/screenshots/desktop.png) | ![Mobile Screenshot](./assets/screenshots/mobile.png) |
+| Desktop                                                     | Mobile                                                    |
+| ----------------------------------------------------------- | --------------------------------------------------------- |
+| ![Desktop Screenshot](./src/assets/screenshots/desktop.png) | ![Mobile Screenshot](./src/assets/screenshots/mobile.png) |
 
 ---
 

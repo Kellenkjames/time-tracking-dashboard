@@ -229,17 +229,6 @@ a:hover {
   padding-bottom: 1.6rem;
   height: 100%;
 }
-@media (min-width: 1024px) {
-  .profile-card {
-    grid-column: 1/2;
-    grid-row: span 2;
-  }
-}
-@media (max-width: 1024px) {
-  .profile-card {
-    padding-bottom: 0;
-  }
-}
 .profile-card__avatar {
   width: 7.8rem;
   border-radius: 50%;
@@ -337,6 +326,23 @@ a:hover {
 .profile-card__link--active {
   color: #ffffff;
 }
+@media (min-width: 1024px) {
+  .profile-card {
+    grid-column: 1/2;
+    grid-row: span 2;
+  }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .profile-card {
+    grid-column: 1/-1;
+    grid-row: auto;
+  }
+}
+@media (max-width: 1024px) {
+  .profile-card {
+    padding-bottom: 0;
+  }
+}
 
 .layout-container {
   margin-inline: auto;
@@ -367,13 +373,8 @@ a:hover {
     grid-template-columns: 1fr repeat(3, 1fr);
   }
 }
-
 @media (min-width: 600px) and (max-width: 1023px) {
   .dashboard-grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-  .profile-card {
-    grid-column: 1/-1;
-    grid-row: auto;
   }
 }/*# sourceMappingURL=main.css.map */

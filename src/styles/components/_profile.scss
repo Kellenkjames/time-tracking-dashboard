@@ -11,15 +11,6 @@
   padding-bottom: $space-200;
   height: 100%;
 
-  @media (min-width: $breakpoint-lg) {
-    grid-column: 1 / 2;
-    grid-row: span 2;
-  }
-
-  @media (max-width: $breakpoint-lg) {
-    padding-bottom: 0;
-  }
-
   &__avatar {
     width: $avatar-size;
     border-radius: 50%;
@@ -55,7 +46,7 @@
     @media (max-width: $breakpoint-lg) {
       @include flex-row(start, center, nowrap);
       gap: $space-300;
-      padding: 3.45rem 3.45rem 3.45rem $space-400;
+      padding: 3.45rem 3.45rem 3.45rem $space-400; // precise Figma match
     }
   }
 
@@ -109,5 +100,23 @@
     &--active {
       color: $white;
     }
+  }
+
+  // ---------------------------------------------
+  // Responsive Layout Enhancements
+  // ---------------------------------------------
+
+  @media (min-width: $breakpoint-lg) {
+    grid-column: 1 / 2;
+    grid-row: span 2;
+  }
+
+  @media (min-width: $breakpoint-sm) and (max-width: ($breakpoint-lg - 1)) {
+    grid-column: 1 / -1; // span all columns
+    grid-row: auto;
+  }
+
+  @media (max-width: $breakpoint-lg) {
+    padding-bottom: 0;
   }
 }

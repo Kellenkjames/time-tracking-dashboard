@@ -12,20 +12,17 @@
   grid-auto-rows: minmax(20.3rem, auto);
   gap: $space-400;
 
+  // ---------------------------------------------
+  // Desktop-only layout
+  // ---------------------------------------------
   @media (min-width: $breakpoint-lg) {
     grid-template-columns: 1fr repeat(3, 1fr); // 4-column layout
   }
-}
 
-// Tablet layout
-@media (min-width: $breakpoint-sm) and (max-width: ($breakpoint-lg - 1)) {
-  .dashboard-grid {
+  // ---------------------------------------------
+  // Tablet-only layout (600px – 1023px)
+  // ---------------------------------------------
+  @media (min-width: $breakpoint-sm) and (max-width: ($breakpoint-lg - 1)) {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  // Move to profile card later
-  .profile-card {
-    grid-column: 1 / -1; // span all columns
-    grid-row: auto;
   }
 }

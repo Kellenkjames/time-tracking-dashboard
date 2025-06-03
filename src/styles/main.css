@@ -341,11 +341,6 @@ a:hover {
     grid-row: auto;
   }
 }
-@media (max-width: 1024px) {
-  .profile-card {
-    padding-bottom: 0;
-  }
-}
 
 .layout-container {
   margin-inline: auto;

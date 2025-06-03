@@ -115,8 +115,4 @@
     grid-column: 1 / -1; // span all columns
     grid-row: auto;
   }
-
-  @media (max-width: $breakpoint-lg) {
-    padding-bottom: 0;
-  }
 }

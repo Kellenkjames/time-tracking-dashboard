@@ -14,7 +14,7 @@
   max-width: 100%;
 
   @media (min-width: $breakpoint-sm) {
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
   }
 
   @media (min-width: $breakpoint-lg) {
